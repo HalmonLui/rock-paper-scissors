@@ -56,6 +56,11 @@ export default class HomeScreen extends React.Component {
     this.setState({ region: region });
   }
 
+  rps() {
+    const { navigate } = this.props.navigation;
+    navigate('RPS');
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -98,7 +103,9 @@ export default class HomeScreen extends React.Component {
           />
         ))}
         </MapView>
-
+        <TouchableOpacity style={styles.rps} onPress = {this.rps.bind(this)}>
+          <Text> R.P.S. </Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -112,4 +119,17 @@ const styles = StyleSheet.create({
   map: {
     height: '125%',
   },
+  rps: {
+    height: '5%',
+    width: '60%',
+    position: 'absolute',
+    alignSelf: 'center',
+    bottom: 10,
+    backgroundColor: '#fff',
+    borderRadius: 10,
+    margin: 10,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  }
 });

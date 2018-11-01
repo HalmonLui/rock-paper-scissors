@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Header } from 'react-navigation';
-import { StyleSheet, View, ScrollView, TextInput, TouchableOpacity, Text, StatusBar, Alert} from 'react-native';
+import { StyleSheet, View, ScrollView, TextInput, TouchableOpacity, Text, StatusBar, Alert, Image} from 'react-native';
 
 export default class RPSSlot extends Component {
   showAlert = () => {
@@ -20,8 +20,8 @@ export default class RPSSlot extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={this.props.onPress}>
-            <Text style={styles.buttonText}>{this.props.name}</Text>
-            <Text style={styles.buttonText}>Damage: {this.props.damage}</Text>
+            {/*<Text style={styles.buttonText}>{this.props.name}</Text>*/}
+            <Image source={this.props.source} />
         </TouchableOpacity>
       </View>
 
@@ -34,13 +34,14 @@ const styles = StyleSheet.create({
     padding: 0,
   },
   buttonContainer: {
-    backgroundColor: 'white',
     paddingVertical: 5,
     marginBottom: 5,
-    width: 100,
-    height: 150,
+    width: '100%',
+    height: '100%',
     opacity: 0.95,
     borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   buttonText: {
     textAlign: 'center',

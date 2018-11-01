@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     opacity: .9,
     borderRadius: 10,
+    marginRight: 10,
   },
   signUpButtonContainer: {
     flex: 1,
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     opacity: .9,
     borderRadius: 10,
+    marginLeft: 10,
   },
   buttonText: {
     textAlign: 'center',
